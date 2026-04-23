@@ -156,7 +156,7 @@ export default function AdminPage() {
                   {filtered.map((app) => (
                     <tr key={app.id} className="hover:bg-slate-50 transition-colors">
                       <td className="px-5 py-4">
-                        <div className="font-medium text-slate-800 text-sm">{app.applicant_name}</div>
+                        <div className="font-medium text-slate-800 text-sm">{app.applicantName}</div>
                         <div className="text-xs text-slate-400 mt-0.5">{app.email}</div>
                       </td>
                       <td className="px-5 py-4">

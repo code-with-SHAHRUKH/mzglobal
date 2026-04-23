@@ -3,7 +3,7 @@ import VisaWizard from '@/components/visa-wizard/VisaWizard';
 import { Globe, ArrowLeft } from 'lucide-react';
 
 export const metadata = {
-  title: 'Apply for a Visa — VisaPath',
+  title: 'Apply for a Visa — Mz Global',
   description: 'Start your visa application with our guided multi-step wizard',
 };
 

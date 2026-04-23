@@ -58,7 +58,7 @@ const steps = [
 
 const testimonials = [
   { name: 'Priya Sharma', from: 'India to UK', text: 'Got my Tier-4 student visa approved in just 3 weeks. The checklist feature saved me so much time!', stars: 5 },
-  { name: 'Carlos Mendes', from: 'Brazil to USA', text: 'Incredible service. My F-1 visa was approved on the first attempt. Highly recommend VisaPath.', stars: 5 },
+  { name: 'Carlos Mendes', from: 'Brazil to USA', text: 'Incredible service. My F-1 visa was approved on the first attempt. Highly recommend Mz Global.', stars: 5 },
   { name: 'Yuki Tanaka', from: 'Japan to Germany', text: 'The document wizard was spot on — every item I needed was listed. Zero back-and-forth with the embassy.', stars: 5 },
 ];
 
@@ -292,7 +292,7 @@ export default function HomePage() {
             </span>
           </div>
           <p className="text-sky-400/60 text-xs">
-            &copy; {new Date().getFullYear()} VisaPath Consultancy. All rights reserved.
+            &copy; {new Date().getFullYear()} Mz Global Consultancy. All rights reserved.
           </p>
           <div className="flex gap-5">
             {['Privacy', 'Terms', 'Contact'].map((item) => (

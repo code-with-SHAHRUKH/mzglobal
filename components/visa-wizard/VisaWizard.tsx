@@ -143,7 +143,7 @@ useEffect(() => {
             <h1 className="font-orbitron text-2xl font-bold text-white tracking-wide">
               Visa Application
             </h1>
-            <p className="text-sky-200 text-xs mt-1 font-medium">Powered by VisaPath Experts</p>
+            <p className="text-sky-200 text-xs mt-1 font-medium">Powered by Mz Global Experts</p>
           </div>
           {step < 4 && (
             <StepIndicator currentStep={step} totalSteps={3} labels={STEP_LABELS} />
