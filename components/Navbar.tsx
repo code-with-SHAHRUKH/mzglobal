@@ -17,17 +17,19 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-[#02143a]/95 backdrop-blur-md shadow-lg shadow-black/20' : 'bg-transparent'
+        scrolled ? 'bg-white backdrop-blur-md shadow-sm shadow-gray-200/50 border-b border-gray-100' : 'bg-white'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-sky-500 rounded-lg flex items-center justify-center">
-            <Globe className="w-4.5 h-4.5 text-white" strokeWidth={2.5} />
-          </div>
-          <span className="font-orbitron text-white font-bold text-lg tracking-wide">
-            Visa<span className="text-sky-400">Path</span>
-          </span>
+        <Link href="/" className="flex items-center gap-3">
+          <img
+            src="/jpeg-01-scaled.jpg"
+            alt="Mz Global Logo"
+            className="h-14 w-auto object-contain"
+          />
+          {/* <span className="font-orbitron text-gray-800 font-bold text-lg tracking-wide">
+            Mz <span className="text-blue-600">Global</span>
+          </span> */}
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -35,7 +37,7 @@ export default function Navbar() {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-sky-100 hover:text-white text-sm font-medium transition-colors"
+              className="text-gray-700 hover:text-blue-600 text-sm font-medium transition-colors duration-200"
             >
               {item}
             </a>
@@ -45,14 +47,14 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <Link
             href="/apply"
-            className="px-5 py-2 rounded-lg font-orbitron text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 transition-all duration-200 shadow-md shadow-sky-900/40"
+            className="px-5 py-2 rounded-lg font-orbitron text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-all duration-200 shadow-md shadow-blue-200"
           >
             Apply Now
           </Link>
         </div>
 
         <button
-          className="md:hidden text-white p-1"
+          className="md:hidden text-gray-700 p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -60,12 +62,12 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-[#02143a]/98 border-t border-sky-900/30 px-6 py-4 space-y-3">
+        <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-3 shadow-lg">
           {['Services', 'Countries', 'About', 'Contact'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="block text-sky-100 hover:text-white text-sm font-medium py-1"
+              className="block text-gray-700 hover:text-blue-600 text-sm font-medium py-2 transition-colors duration-200"
               onClick={() => setMobileOpen(false)}
             >
               {item}
@@ -73,7 +75,8 @@ export default function Navbar() {
           ))}
           <Link
             href="/apply"
-            className="block mt-3 px-5 py-2.5 rounded-lg font-orbitron text-xs font-semibold text-white bg-sky-600 text-center"
+            className="block mt-4 px-5 py-2.5 rounded-lg font-orbitron text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 text-center transition-all duration-200"
+            onClick={() => setMobileOpen(false)}
           >
             Apply Now
           </Link>

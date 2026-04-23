@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
+import Counter from '@/components/Counter';
 import {
   Globe, Shield, Clock, FileCheck, Star,
   ArrowRight, Briefcase, BookOpen, Plane
@@ -132,7 +133,9 @@ export default function HomePage() {
                 className="rounded-2xl p-6 text-center"
                 style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)' }}
               >
-                <div className="font-orbitron text-3xl font-black text-white mb-1">{value}</div>
+                <div className="font-orbitron text-3xl font-black text-white mb-1">
+                  <Counter value={value} />
+                </div>
                 <div className="text-sky-300 text-xs font-medium">{label}</div>
               </div>
             ))}
@@ -145,7 +148,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 gap-4">
           {stats.map(({ value, label }) => (
             <div key={label} className="text-center">
-              <div className="font-orbitron text-2xl font-black text-white">{value}</div>
+              <div className="font-orbitron text-2xl font-black text-white">
+                <Counter value={value} />
+              </div>
               <div className="text-sky-200 text-xs font-medium mt-0.5">{label}</div>
             </div>
           ))}
